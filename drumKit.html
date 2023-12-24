@@ -1,0 +1,15 @@
+<template>
+	<div class="main" style={backgroundStyle}>
+		<div class="box">
+			<template for:each={keyList} for:item="key">
+				<div class={key.keyStyle} key={key.character} data-id="keyBoxPlaying">
+					<div>{key.character}</div>
+					<div>{key.label}</div>
+					<audio ref={audioRef}>
+						<source src={key.audioUrl} type="audio/mp3" />
+					</audio>
+				</div>
+			</template>
+		</div>
+	</div>
+</template>
